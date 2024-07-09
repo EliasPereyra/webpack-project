@@ -1,4 +1,4 @@
-# React.js with Webpack from scratch
+# React.js con Webpack desde cero
 
 En un solo archivo podemos configurar todo lo que se necesita para configurar y hacer uso de Webpack.
 
@@ -42,6 +42,6 @@ Una vez teniendo todo el proyecto configurado, podemos proceder a construir el p
   npx webpack --config webpack.config.js
 ```
 
-## Troubleshooting
+## Problemas que pueden surgir
 
 - `SyntaxError: Cannot use import statement outside a module`: Asegurate que tu package.json tiene la opción `type: module`.
