@@ -1,8 +1,7 @@
-import HtmlWebpackPlugin from "html-webpack-plugin";
 import path from "path";
 import { fileURLToPath } from "url";
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
-// To-do: Agregar soporte css
 // To-do: Agregar soporte SCSS
 // To-do: Agregar soporte env vars
 // To-do: Agregar soporte imagenes
@@ -36,6 +35,9 @@ export default {
   },
   output: {
     path: path.join(__dirname, "/dist"),
-    filename: "bundle.js",
+    // filename: "bundle.js",
+    filename: "scripts/[name].[fullhash:8].bundle.js",
+    chunkFilename: "scripts/[name].[fullhash:8].bundle.js",
+    publicPath: "/",
   },
 };
