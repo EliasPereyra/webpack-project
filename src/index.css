@@ -1,6 +1,60 @@
 :root {
-  --clr-black: #0c0c0c;
+  --clr-black-900: color-mix(in oklab, hsl(0, 0%, 0%) 0%, hsl(0, 0%, 7%) 100%);
+  --clr-black-800: color-mix(in oklab, hsl(0, 0%, 0%) 0%, hsl(0, 0%, 9%) 100%);
+  --clr-black-700: color-mix(in oklab, hsl(0, 0%, 0%) 0%, hsl(0, 0%, 12%) 100%);
+  --clr-black-600: color-mix(in oklab, hsl(0, 0%, 0%) 0%, hsl(0, 0%, 15%) 100%);
+  --clr-black-500: color-mix(in oklab, hsl(0, 0%, 0%) 0%, hsl(0, 0%, 18%) 100%);
+  --clr-black-400: color-mix(in oklab, hsl(0, 0%, 0%) 0%, hsl(0, 0%, 21%) 100%);
+  --clr-black-300: color-mix(in oklab, hsl(0, 0%, 0%) 0%, hsl(0, 0%, 24%) 100%);
+  --clr-black-200: color-mix(in oklab, hsl(0, 0%, 0%) 0%, hsl(0, 0%, 27%) 100%);
+  --clr-black-100: color-mix(in oklab, hsl(0, 0%, 0%) 0%, hsl(0, 0%, 30%) 100%);
+
   --clr-white: #f7f6f6;
+  --clr-violet-900: color-mix(
+    in oklab,
+    hsl(244, 36%, 36%) 0%,
+    hsl(244, 36%, 40%) 100%
+  );
+  --clr-violet-800: color-mix(
+    in oklab,
+    hsl(244, 36%, 36%) 0%,
+    hsl(244, 36%, 44%) 100%
+  );
+  --clr-violet-700: color-mix(
+    in oklab,
+    hsl(244, 36%, 36%) 0%,
+    hsl(244, 36%, 48%) 100%
+  );
+  --clr-violet-600: color-mix(
+    in oklab,
+    hsl(244, 36%, 36%) 0%,
+    hsl(244, 36%, 52%) 100%
+  );
+  --clr-violet-500: color-mix(
+    in oklab,
+    hsl(244, 36%, 36%) 0%,
+    hsl(244, 36%, 56%) 100%
+  );
+  --clr-violet-400: color-mix(
+    in oklab,
+    hsl(244, 36%, 36%) 0%,
+    hsl(244, 36%, 60%) 100%
+  );
+  --clr-violet-300: color-mix(
+    in oklab,
+    hsl(244, 36%, 36%) 0%,
+    hsl(244, 36%, 74%) 100%
+  );
+  --clr-violet-200: color-mix(
+    in oklab,
+    hsl(244, 36%, 36%) 0%,
+    hsl(244, 36%, 88%) 100%
+  );
+  --clr-violet-100: color-mix(
+    in oklab,
+    hsl(244, 36%, 36%) 0%,
+    hsl(244, 36%, 92%) 100%
+  );
 }
 
 * {
@@ -12,11 +66,15 @@
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background-color: var(--clr-white);
+  background: linear-gradient(
+    to right,
+    var(--clr-violet-900),
+    var(--clr-violet-800)
+  );
 }
 
 :is(h1, h2, h3, h4, h5, h6, p, a, button) {
-  color: var(--clr-black);
+  color: var(--clr-white);
   line-height: 1.2;
 }
 
@@ -25,6 +83,22 @@ h1 {
   font-weight: 700;
 }
 
+p {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
 a {
   text-decoration: none;
+  color: var(--clr-violet-100);
+  transition: color 0.08s ease-in, text-decoration 0.08s ease-in;
+
+  &:hover {
+    text-decoration: underline;
+    color: var(--clr-violet-300);
+  }
+}
+
+li {
+  list-style: none;
 }
