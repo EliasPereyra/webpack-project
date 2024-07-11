@@ -1,0 +1,17 @@
+.topbar-wrapper {
+  padding: 1rem;
+  background-color: var(--clr-violet-400);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .tw__github-repo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    svg {
+      fill: var(--clr-violet-400);
+    }
+  }
+}
