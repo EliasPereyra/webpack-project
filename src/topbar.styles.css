@@ -9,9 +9,5 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-
-    svg {
-      fill: var(--clr-violet-400);
-    }
   }
 }
