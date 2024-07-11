@@ -1,10 +1,7 @@
 import path from "path";
 import { fileURLToPath } from "url";
 import HtmlWebpackPlugin from "html-webpack-plugin";
-
-// To-do: Agregar soporte SCSS
-// To-do: Agregar soporte env vars
-// To-do: Agregar soporte en optimizaciones
+import CompressionPlugin from "compression-webpack-plugin";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -29,11 +26,17 @@ export default {
       },
     ],
   },
-  plugins: [new HtmlWebpackPlugin({ template: "./src/index.html" })],
+  plugins: [
+    new HtmlWebpackPlugin({ template: "./src/index.html" }),
+    new CompressionPlugin(),
+  ],
   devServer: {
     compress: true,
     port: 3000,
     hot: true,
+  },
+  resolve: {
+    extensions: [".js", ".jsx"],
   },
   output: {
     path: path.join(__dirname, "/dist"),
