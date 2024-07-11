@@ -4,8 +4,6 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 
 // To-do: Agregar soporte SCSS
 // To-do: Agregar soporte env vars
-// To-do: Agregar soporte imagenes
-// To-do: Agregar soporte lazy loading/code splitting
 // To-do: Agregar soporte en optimizaciones
 
 const __filename = fileURLToPath(import.meta.url);
@@ -24,6 +22,10 @@ export default {
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
+        type: "asset/resource",
       },
     ],
   },
